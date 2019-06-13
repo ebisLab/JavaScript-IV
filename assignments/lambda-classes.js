@@ -15,7 +15,7 @@ class Person{ //base-class
 
 
 
-class Instructors extends { //base-class
+class Instructors extends Person{ //base-class
     constructor(instattr) {
         super(instattr); //the binding part
 
@@ -26,11 +26,33 @@ class Instructors extends { //base-class
   
   demo(subject){ //function
       console.log(`Today we are learning about 
-      ${subject} where subject is the param passed in.`)
+      ${this.subject} where subject is the param passed in.`)
     }
 
    grade(student, subject){ //function
         console.log(`${this.name} receives a perfect score on ${this.subject}.`)
+      }
+}
+
+class Student extends Instructors{ //base-class
+    constructor(studattr) {
+        super(studattr); //the binding part
+
+    this.previousBackground = studattr.previousBackground;
+    this.className = studattr.className;
+    this.favSubjects = studattr.favSubjects;
+  }
+  
+  listsSubjects(){ //function
+      console.log(`${this.favSubjects} `) //LISTS OUT FAV SUBJECT ONE BY ONE
+    }
+
+    PRAssignment(subject){ //function
+        console.log(`${student.name} has submitted a PR for ${this.subject}`)
+      }
+
+    sprintChallenge(subject){ //function
+        console.log(`${student.name} has begun sprint challenge on${this.subject}`)
       }
 }
 
