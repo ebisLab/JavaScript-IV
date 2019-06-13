@@ -13,9 +13,7 @@ class Person{ //base-class
     }
 }
 
-
-
-class Instructors extends Person{ //base-class
+class Instructors extends Person{ 
     constructor(instattr) {
         super(instattr); //the binding part
 
@@ -34,7 +32,7 @@ class Instructors extends Person{ //base-class
       }
 }
 
-class Student extends Instructors{ //base-class
+class Student extends Person{ 
     constructor(studattr) {
         super(studattr); //the binding part
 
@@ -56,14 +54,32 @@ class Student extends Instructors{ //base-class
       }
 }
 
+class PM extends Instructors{ 
+    constructor(pmattr) {
+        super(pmattr); //the binding part
 
+    this.gradClassName = pmattr.gradClassName;
+    this.favInstructor = pmattr.favInstructor;
+  }
+  
+  standUp(subject){ //function
+      console.log(`${name} announces to ${channel}, @channel standy times!​​​​​`)
+    }
 
+    debugsCode(student, subject){ //function
+        console.log(`${name} debugs ${student.name}'s code on ${subject}`)
+      }
+      
+}
 
-// const fred = new Instructor({
-//     name: 'Fred',
-//     location: 'Bedrock',
-//     age: 37,
-//     favLanguage: 'JavaScript',
-//     specialty: 'Front-end',
-//     catchPhrase: `Don't forget the homies`
-//   });
+const sailormoon = new Person({
+    name = 'sailormoon';
+    location = 'Japan';
+    age= '15';
+  });
+
+const dan = new Instructor({
+    specialty = 'Redux',
+    favLanguage = 'JavaScript',
+    catchPhrase = 'I forgot the homies',
+  });
