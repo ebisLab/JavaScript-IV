@@ -73,9 +73,9 @@ class PM extends Instructors{
 }
 
 const sailormoon = new Person({
-    name = 'sailormoon';
-    location = 'Japan';
-    age= '15';
+    name = 'sailormoon',
+    location = 'Japan',
+    age= '15',
   });
 
 const dan = new Instructor({
@@ -83,3 +83,18 @@ const dan = new Instructor({
     favLanguage = 'JavaScript',
     catchPhrase = 'I forgot the homies',
   });
+
+  const goku = new Student({
+    previousBackground = 'god knows',
+    className = 'lower class',
+    favSubjects = 'nutrition',
+  });
+
+  const austin = new PM({
+    gradClassName = 'Web21',
+    favInstructor = 'Yoda',
+  });
+
+  
+
+
