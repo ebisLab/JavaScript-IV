@@ -13,13 +13,13 @@ class Person{ //base-class
     }
 }
 
-class Instructors extends Person{ 
+class Instructor extends Person{ 
     constructor(instattr) {
         super(instattr); //the binding part
 
-    this.specialty = instattr.specialty;
-    this.favLanguage = instattr.favLanguage;
-    this.catchPhrase = instattr.catchPhrase;
+        this.specialty = instattr.specialty;
+        this.favLanguage = instattr.favLanguage;
+        this.catchPhrase = instattr.catchPhrase;
   }
   
   demo(subject){ //function
@@ -28,7 +28,7 @@ class Instructors extends Person{
     }
 
    grade(student, subject){ //function
-        console.log(`${this.name} receives a perfect score on ${this.subject}.`)
+        console.log(`${Student.name} receives a perfect score on ${Student.subject}.`)
       }
 }
 
@@ -54,7 +54,7 @@ class Student extends Person{
       }
 }
 
-class PM extends Instructors{ 
+class PM extends Person{ 
     constructor(pmattr) {
         super(pmattr); //the binding part
 
@@ -66,34 +66,46 @@ class PM extends Instructors{
       console.log(`${name} announces to ${channel}, @channel standy times!​​​​​`)
     }
 
-    debugsCode(student, subject){ //function
-        console.log(`${name} debugs ${student.name}'s code on ${subject}`)
+    debugsCode(student,subject){ //function
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
       }
       
 }
 
-const sailormoon = new Person({
-    name = 'sailormoon',
-    location = 'Japan',
-    age= '15',
-  });
+// const sailormoon = new Person({
+//     // name = 'sailormoon',
+//     location = 'Japan',
+//     age= '15',
+//   });
 
 const dan = new Instructor({
-    specialty = 'Redux',
-    favLanguage = 'JavaScript',
-    catchPhrase = 'I forgot the homies',
+    name: 'sailormercury',
+    location: 'Japan',
+    age: '15',
+    specialty: 'Redux',
+    favLanguage : 'JavaScript',
+    catchPhrase : 'I forgot the homies',
   });
 
   const goku = new Student({
-    previousBackground = 'god knows',
-    className = 'lower class',
-    favSubjects = 'nutrition',
+    name : 'sailorvenus',
+    location : 'Japan',
+    age : '15',
+    previousBackground : 'god knows',
+    className : 'lower class',
+    favSubjects : 'nutrition',
   });
 
   const austin = new PM({
-    gradClassName = 'Web21',
-    favInstructor = 'Yoda',
+    name : 'sailorjupiter',
+    location : 'Japan',
+    age : '15',
+    gradClassName : 'Web21',
+    favInstructor : 'Yoda',
   });
+
+
+  console.log(austin.debugsCode(goku, "Javascript"));
 
   
 
