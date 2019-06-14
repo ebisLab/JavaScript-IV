@@ -1,4 +1,8 @@
 // CODE here for your Lambda Classes
+console.log("")
+console.log("--*--*--Assignment 2 --*----*")
+console.log("")
+
 
 class Person{ //base-class
     constructor(persattr) {
@@ -23,12 +27,11 @@ class Instructor extends Person{
   }
   
   demo(subject){ //function
-      return `Today we are learning about 
-      ${this.subject} where subject is the param passed in.`
+      return `Today we are learning about ${subject} where subject is the param passed in.`
     }
 
    grade(student, subject){ //function
-        return `${Student.name} receives a perfect score on ${Student.subject}.`
+        return `${student.name} receives a perfect score on ${subject}.`
       }
 }
 
@@ -42,15 +45,15 @@ class Student extends Person{
   }
   
   listsSubjects(){ //function
-      console.log(`${this.favSubjects} `) //LISTS OUT FAV SUBJECT ONE BY ONE
+      return `${this.favSubjects} ` //LISTS OUT FAV SUBJECT ONE BY ONE
     }
 
     PRAssignment(subject){ //function
-        console.log(`${student.name} has submitted a PR for ${this.subject}`)
+        return `${this.name} has submitted a PR for ${subject}`
       }
 
     sprintChallenge(subject){ //function
-        console.log(`${student.name} has begun sprint challenge on${this.subject}`)
+        return `${this.name} has begun sprint challenge on ${subject}`
       }
 }
 
@@ -62,8 +65,8 @@ class PM extends Instructor{
     this.favInstructor = pmattr.favInstructor;
   }
   
-  standUp(subject){ //function
-      return `${name} announces to ${channel}, @channel standy times!​​​​​`
+  standUp(channel){ //function
+      return `${this.name} announces to ${channel}, @channel standy times!​​​​​`
     }
 
     debugsCode(student,subject){ //function
@@ -78,15 +81,15 @@ class PM extends Instructor{
 //     age= '15',
 //   });
 
-const dan = new Instructor({
-    name: 'sailormercury',
+const roshi = new Instructor({
+    name: 'Master Roshi',
     location: 'Japan',
-    age: '15',
+    age: '300',
     specialty: 'Redux',
     favLanguage : 'JavaScript',
     catchPhrase : 'I forgot the homies',
   });
-
+/*
   const goku = new Student({
     name : 'sailorvenus',
     location : 'Japan',
@@ -104,7 +107,7 @@ const dan = new Instructor({
     favInstructor : 'Yoda',
   });
 
-
+*/
 
   //// ----- Data Extracted from Slack group -----//////////
 
@@ -116,6 +119,15 @@ const dan = new Instructor({
     specialty: 'Relentless Debugger',
     favLanguage: 'JavaScript, Python, Elm, ReasonML, SmallTalk, Haskell, C#, Java, Rust, Go, Ruby, Crystal, Elixir, Lua, and Julia',
     catchPhrase: 'If you can do the thing, you can get paid to do the thing!',
+});
+
+const ebi = new Student({
+    name: 'ebi',
+    age: 29,
+    location: 'Indy',
+    previousBackground: 'Designer',
+    className: 'Web21',
+    favSubjects: ['Html', 'CSS', 'Sailormonology'],
 });
 
   const isaiah = new Student({
@@ -152,7 +164,7 @@ const dan = new Instructor({
     favSubjects: ["Computer Science", "Philosophy", "English"],
 });
 
-  const marguel = new ProjectManager({
+  const marguel = new PM({
     name: 'Marguel',
     age: 'Maybe 26',
     gradClassName: 'WEBPT2',
@@ -163,7 +175,7 @@ const dan = new Instructor({
     catchPhrase: "Practice Flex Zombies !!!",
 });
 
-  const brandon = new ProjectManager({
+  const brandon = new PM({
     name: 'Brandon',
     age: '34',
     gradClassName: 'WEB18',
@@ -174,7 +186,7 @@ const dan = new Instructor({
     catchPhrase: "You shall not pass!",
 });
 
-    const mary = new ProjectManager({
+    const mary = new PM({
     name: 'Mary',
     age: '24',
     gradClassName: 'WEB18',
@@ -185,7 +197,7 @@ const dan = new Instructor({
     catchPhrase: "That looks AWESOME",
 });
 
-    const christian = new ProjectManager({
+    const christian = new PM({
     name: 'Christian',
     age: '32',
     gradClassName: 'WEB18',
@@ -196,7 +208,7 @@ const dan = new Instructor({
     catchPhrase: "Dont forget your daily commit.",
 });
 
-    const pat = new ProjectManager({
+    const pat = new PM({
     name: 'Pat',
     age: '38',
     gradClassName: 'WEB18',
@@ -207,7 +219,7 @@ const dan = new Instructor({
     catchPhrase: 'Lets google that together.'
 });
 
-    const darren = new ProjectManager({
+    const darren = new PM({
     name: 'Darren',
     age: '25',
     gradClassName: 'WEB18',
@@ -218,7 +230,7 @@ const dan = new Instructor({
     catchPhrase: 'Gang. Gang.',
 });
 
-    const austin = new ProjectManager({
+    const austin = new PM({
     name: 'Austin',
     age: '23',
     gradClassName: 'WEB18',
@@ -232,11 +244,18 @@ const dan = new Instructor({
 
 
 
-console.log()
 
 
 
 
+//speak();
+console.log(ebi.speak());
+console.log(roshi.demo("The Kamehameha"));
+console.log(dan.grade(nisa, "Javascript"));
+console.log(austin.debugsCode(joscelyn, joscelyn.favSubjects[2]));
+console.log(joscelyn.listsSubjects());
+console.log(joscelyn.PRAssignment("something"));
+console.log(joscelyn.sprintChallenge("idea"));
 
-  console.log(austin.debugsCode(goku, "Javascript"));
+
 //   console.log(austin.debugsCode(goku, "Javascript"));
