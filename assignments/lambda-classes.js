@@ -65,11 +65,11 @@ class PM extends Instructor{
     this.favInstructor = pmattr.favInstructor;
   }
   
-  standUp(channel){ //function
-      return `${this.name} announces to ${channel}, @channel standy times!​​​​​`
+  standUp(subject){ //function
+      return `${this.name} announces to ${subject}, @channel standy times!​​​​​`
     }
 
-    debugsCode(student,subject){ //function
+    debugsCode(student, subject){ //function
         return `${this.name} debugs ${student.name}'s code on ${subject}`
       }
       
@@ -252,10 +252,15 @@ const ebi = new Student({
 console.log(ebi.speak());
 console.log(roshi.demo("The Kamehameha"));
 console.log(dan.grade(nisa, "Javascript"));
-console.log(austin.debugsCode(joscelyn, joscelyn.favSubjects[2]));
 console.log(joscelyn.listsSubjects());
-console.log(joscelyn.PRAssignment("something"));
-console.log(joscelyn.sprintChallenge("idea"));
+console.log(joscelyn.PRAssignment("Lambda"));
+console.log(kevin.sprintChallenge("Lambda"));
+console.log(austin.standUp(joscelyn.className));
+
+console.log(darren.debugsCode(joscelyn, joscelyn.favSubjects[2]));
+console.log(`${dan.catchPhrase}  -${dan.name}`);
+console.log("Hello")
+
 
 
 //   console.log(austin.debugsCode(goku, "Javascript"));
